@@ -26,31 +26,13 @@ In an effort to be completely transparent, this payload does 4 things.
 Files:
 1. <HOSTNAME>-wificurrent.txt:
    This file contains the current state of the Wi-Fi including RSSI, SNR, state, TX Rate, Authentication, BSSID, SSID, MCS and Channel.
-   ```     agrCtlRSSI: -56
-     agrExtRSSI: 0
-    agrCtlNoise: -98
-    agrExtNoise: 0
-          state: running
-        op mode: station 
-     lastTxRate: 600
-        maxRate: 450
-lastAssocStatus: 0
-    802.11 auth: open
-      link auth: wpa2-psk
-          BSSID: 01:02:03:04:05:06
-           SSID: MyTestSSID
-            MCS: 9
-        channel: 36,1
-   ```
+
 2. <HOSTNAME>-wificurrent.xml
    This is a duplicate of the previous file, but formatted in XML output.  There are some different elements in this output, and some missing.  But it is the same command.
   
 3. <HOSTNAME>-wifidiag.txt
    This file is a current scan result from the wifi chipset in text format.
-   ``` SSID BSSID             RSSI CHANNEL HT CC SECURITY (auth/unicast/group)
-                      mySSID1 b8:ec:a3:00:00:01 -86  1       Y  -- WPA(PSK/AES,TKIP/TKIP) WPA2(PSK/AES,TKIP/TKIP) 
-                      Silverleaf ec:58:ea:00:00:02 -85  1       Y  US WPA2(PSK/AES/AES) 
-   ```
+
 4. <HOSTNAME>-wifidiag.xml
    This is the same command but run with the --xml flag.  Not exactly the same data, but similar and in structured format.
 
