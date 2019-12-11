@@ -24,18 +24,18 @@ In an effort to be completely transparent, this payload does 4 things.
 ## Example Output:
 
 Files:
-1. <HOSTNAME>-wificurrent.txt:
+1. HOSTNAME-wificurrent.txt:
    This file contains the current state of the Wi-Fi including RSSI, SNR, state, TX Rate, Authentication, BSSID, SSID, MCS and Channel.
 
-2. <HOSTNAME>-wificurrent.xml
+2. HOSTNAME-wificurrent.xml
    This is a duplicate of the previous file, but formatted in XML output.  There are some different elements in this output, and some missing.  But it is the same command.
   
-3. <HOSTNAME>-wifidiag.txt
+3. HOSTNAME-wifidiag.txt
    This file is a current scan result from the wifi chipset in text format.
 
-4. <HOSTNAME>-wifidiag.xml
+4. HOSTNAME-wifidiag.xml
    This is the same command but run with the --xml flag.  Not exactly the same data, but similar and in structured format.
 
-5. <HOSTNAME>-roaming-info.txt
+5. HOSTNAME-roaming-info.txt
    This file gives you the roaming history of the device.
    
