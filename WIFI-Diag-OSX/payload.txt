@@ -1,0 +1,44 @@
+#!/bin/bash
+#
+# Title:         OS X Wifi Diagnostics
+# Author:        jsnyder81
+# Version:       0.1
+# Category:      Sysadmin Tools
+# Target:        Mac OS X 10.13
+#
+#
+
+LED SETUP
+ATTACKMODE ECM_ETHERNET
+QUACK DELAY 3000
+GET TARGET_HOSTNAME
+ATTACKMODE HID STORAGE
+LED STAGE1
+QUACK DELAY 1000
+RUN OSX terminal
+QUACK DELAY 2000
+QUACK STRING "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport --scan --xml | tee /Volumes/BashBunny/Loot/${TARGET_HOSTNAME}-wifidiag.xml"
+QUACK ENTER
+QUACK DELAY 5000
+QUACK STRING "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I --xml| tee /Volumes/BashBunny/Loot/${TARGET_HOSTNAME}-wificurrent.xml"
+QUACK ENTER
+QUACK DELAY 1000
+QUACK STRING "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport --scan | tee /Volumes/BashBunny/Loot/${TARGET_HOSTNAME}-wifidiag.txt"
+QUACK ENTER
+QUACK DELAY 5000
+QUACK STRING "defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences | grep LastConnected -A 7 | tee /Volumes/BashBunny/Loot/${TARGET_HOSTNAME}-roaming-info.txt"
+QUACK ENTER
+QUACK DELAY 1000
+QUACK STRING "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | tee /Volumes/BashBunny/Loot/${TARGET_HOSTNAME}-wificurrent.txt"
+QUACK ENTER
+QUACK DELAY 1000
+QUACK STRING "clear"
+QUACK ENTER
+QUACK DELAY 1000
+LED STAGE2
+QUACK STRING "diskutil unmount BashBunny"
+QUACK ENTER
+QUACK DELAY 1000
+QUACK GUI q
+QUACK ENTER
+LED FINISH
