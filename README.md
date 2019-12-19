@@ -4,6 +4,10 @@ A bash bunny payload to collect Wi-Fi related info from a Mac.
 ## Objective
 The goal of this payload is to create an easy way to collect wifi diagnostics from a Mac OSX computer for the aid of troubleshooting.  This is not a security payload, nor is this meant to be a stealth package.  It's just intended to ease collection of data from a machine to expedite troubleshooting.
 
+## Requirements
+Firmware version 1.6+
+Due to some changes in the BashBunny payloads, this will not work on older versions of code.
+
 ## What it does
 In an effort to be completely transparent, this payload does 4 things.
 1. Attaches to the machine as ECM_ETHERNET.  Gets the host name through the GET TARGET_HOSTNAME
